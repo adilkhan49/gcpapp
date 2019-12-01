@@ -37,3 +37,5 @@ RUN wget https://github.com/opentradesolutions/data/raw/master/ticks.txt.xz.part
 RUN cat ticks.txt.xz.part1 ticks.txt.xz.part2 > ticks.txt.xz
 RUN xz -d ticks.txt.xz
 RUN cp opentrade.conf-example opentrade.conf
+ENV PORT 9111
+CMD ["./opentrade"]
