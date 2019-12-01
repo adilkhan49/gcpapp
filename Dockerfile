@@ -27,3 +27,6 @@ RUN apt-get update \
     libquickfix-dev \
     libtbb-dev \
     liblog4cxx-dev
+RUN git clone https://github.com/opentradesolutions/opentrade /home/opentrade/
+WORKDIR /home/opentrade
+RUN make debug
