@@ -30,3 +30,5 @@ RUN apt-get update \
 RUN git clone https://github.com/opentradesolutions/opentrade /home/opentrade/
 WORKDIR /home/opentrade
 RUN make debug
+RUN wget https://github.com/opentradesolutions/data/raw/master/test.sqlite3
+
