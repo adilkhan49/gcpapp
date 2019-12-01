@@ -31,4 +31,9 @@ RUN git clone https://github.com/opentradesolutions/opentrade /home/opentrade/
 WORKDIR /home/opentrade
 RUN make debug
 RUN wget https://github.com/opentradesolutions/data/raw/master/test.sqlite3
-
+RUN wget https://raw.githubusercontent.com/opentradesolutions/data/master/bbgids.txt
+RUN wget https://github.com/opentradesolutions/data/raw/master/ticks.txt.xz.part1
+RUN wget https://github.com/opentradesolutions/data/raw/master/ticks.txt.xz.part2
+RUN cat ticks.txt.xz.part1 ticks.txt.xz.part2 > ticks.txt.xz
+RUN xz -d ticks.txt.xz
+RUN cp opentrade.conf-example opentrade.conf
