@@ -5,4 +5,6 @@ cd gcpapp
 docker build -t "gcpapp-dev" .
 docker container run  -p 9111:9111 --rm  gcpapp-dev
 ```
-username/password test/test
+open localhost:9111 on browser
+
+username/password : test/test
